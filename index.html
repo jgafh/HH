@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HavenHome - Hosts</title>
+  <meta name="description" content="HavenHome - Hosts - Gestión de propiedades Airbnb en El Salvador. Hospitalidad, honestidad y profesionalismo." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #333;
+      line-height: 1.6;
+	  scroll-padding-top: 60px;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(250, 255, 255, 0.9);
+      backdrop-filter: blur(1px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    nav img {
+      height: 45px;
+	  padding: 10px 15px;
+	  backdrop-filter: blur(10px);
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+	  padding: 10px 15px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #132266;
+      font-weight: 500;
+      transition: color 0.2s ease-in-out;
+    }
+    .nav-links a:hover {
+      color: #f97316;
+    }
+
+    header {
+      background: url('HH - Hero3.png') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 100px 0px 150px;
+      margin-top: 10px;
+    }
+    header h1 {
+      margin: 1;
+      font-size: 56px;
+      font-weight: 600;
+      letter-spacing: -1px;
+    }
+    header p {
+      font-size: 20px;
+      margin-top: 14px;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 {
+      color: #132266;
+      margin-bottom: 15px;
+    }
+    .about, .services {
+      background: #f9f9f9;
+      border-radius: 12px;
+      padding: 40px;
+      margin-bottom: 50px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .properties {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-bottom: 80px;
+    }
+    .property {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: transform 0.2s ease-in-out;
+    }
+    .property:hover {
+      transform: translateY(-4px);
+    }
+    .property img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+    .property-content {
+      padding: 20px;
+    }
+    .property h3 {
+      margin: 0 0 10px;
+      color: #132266;
+    }
+    .property p {
+      color: #555;
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+    .property a {
+      display: inline-block;
+      color: white;
+      background: #132266;
+      padding: 10px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background 0.2s ease;
+    }
+    .property a:hover {
+      background: #1e3a8a;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 25px;
+    }
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+    }
+    button {
+      background: #132266;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 15px;
+      cursor: pointer;
+      align-self: flex-start;
+    }
+    button:hover {
+      background: #1e3a8a;
+    }
+
+    footer {
+      background: #f8f8f8;
+      text-align: center;
+      padding: 30px;
+      font-size: 14px;
+      color: #555;
+      border-top: 1px solid #e5e5e5;
+    }
+    footer a {
+      color: #132266;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <img src="HH logo.svg" alt="Haven Home Logo">
+    <div class="nav-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#about">Quiénes Somos</a>
+      <a href="#services">Qué Hacemos</a>
+      <a href="#properties">Propiedades</a>
+      <a href="#contact"><b>Contacto</b></a>
+    </div>
+  </nav>
+
+  <header id="inicio">
+    <!--<h1>HAVENHOME - Hosts</h1>*/-->
+	<img src="HH Hero white.svg" alt="Haven Home Logo">
+    <p>Gestión profesional de alojamientos temporales en El Salvador</p>
+  </header>
+
+  <section id="about" class="about">
+    <h2>Quiénes Somos</h2>
+    <p>HavenHome es una iniciativa para la gestión de propiedades especializada en alquileres a corto plazo a través de la plataforma Airbnb. Nuestro objetivo es brindar un servicio basado en la hospitalidad, honestidad y profesionalismo, generando experiencias únicas para los huéspedes y tranquilidad a los propietarios, mientras posicionamos a HAVENHOME como referente en la gestión de alojamientos temporales.</p>
+  </section>
+
+  <section id="services" class="services">
+    <h2>Qué Hacemos</h2>
+    <ul>
+      <li>Creación y optimización del anuncio en Airbnb.</li>
+      <li>Coordinación de limpieza y adecuación de propiedad.</li>
+      <li>Comunicación con los huéspedes 24/7.</li>
+      <li>Gestión de reseñas y reportes de desempeño.</li>
+    </ul>
+  </section>
+
+  <section id="properties" class="properties">
+    <div class="property">
+      <img src="loft.png" alt="Loft en Santa Elena">
+      <div class="property-content">
+        <h3>Loft en Santa Elena</h3>
+        <p>Un acogedor loft con diseño moderno y cálido, ideal para parejas o viajeros. Totalmente equipado y ubicado en una zona tranquila.</p>
+        <a href="https://www.airbnb.mx/rooms/1408218459291313095?guests=1&adults=1&s=67&unique_share_id=2d27ea4b-ee1d-44e6-972b-d65df646aa38" target="_blank">Ver en Airbnb</a>
+      </div>
+    </div>
+
+    <div class="property">
+      <img src="novus1.png" alt="Apto Novus">
+      <div class="property-content">
+        <h3>Apartamento en San Francisco</h3>
+        <p>Próximamente disponible. Un espacio elegante y moderno en una de las zonas más exclusivas de San Salvador.</p>
+        <a href="#">Coming Soon</a>
+      </div>
+    </div>
+
+    <div class="property">
+      <img src="sanblas.png" alt="Rancho San blas">
+      <div class="property-content">
+        <h3>Rancho de playa en San Blas</h3>
+        <p>Próximamente disponible. Disfruta del sol, la arena y el mar en un ambiente relajado y familiar.</p>
+        <a href="#">Coming Soon</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contáctanos</h2>
+    <p>¿Tienes una propiedad o deseas reservar una estancia? Escríbenos y nos pondremos en contacto contigo.</p>
+    <form action="mailto:havenhome.hosts@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="nombre" placeholder="Nombre" required>
+      <input type="email" name="email" placeholder="Correo electrónico" required>
+      <textarea name="mensaje" rows="5" placeholder="Mensaje" required></textarea>
+      <button type="submit">Enviar mensaje</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>📩 havenhome.hosts@gmail.com | 📸 <a href="https://www.instagram.com/havenhome.hosts" target="_blank">@havenhome.hosts</a></p>
+    <p>© <span id="year"></span> HavenHome - Hosts. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
