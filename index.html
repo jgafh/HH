@@ -3,17 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HavenHome - Hosts</title>
-  <meta name="description" content="HavenHome - Hosts - Gestión de propiedades Airbnb en El Salvador. Hospitalidad, honestidad y profesionalismo." />
+  <title>Haven Home Hosts</title>
+  <meta name="description" content="Haven Home Hosts - Gestión de propiedades Airbnb en El Salvador. Hospitalidad, honestidad y profesionalismo." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
+    html {
+      scroll-padding-top: 80px;
+    }
+
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
       background-color: #ffffff;
       color: #333;
       line-height: 1.6;
-	  scroll-padding-top: 60px;
     }
 
     /* NAVBAR */
@@ -22,24 +25,24 @@
       top: 0;
       left: 0;
       width: 100%;
-      background: rgba(250, 255, 255, 0.9);
-      backdrop-filter: blur(1px);
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 8px 0px;
+      padding: 8px 24px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       z-index: 1000;
+      flex-wrap: wrap;
     }
     nav img {
-      height: 45px;
-	  padding: 10px 15px;
-	  backdrop-filter: blur(10px);
+      height: 42px;
+      flex-shrink: 0;
     }
     .nav-links {
       display: flex;
-      gap: 20px;
-	  padding: 10px 15px;
+      flex-wrap: wrap;
+      gap: 16px;
     }
     .nav-links a {
       text-decoration: none;
@@ -51,33 +54,54 @@
       color: #f97316;
     }
 
+    /* HERO */
     header {
       background: url('HH - Hero3.png') center/cover no-repeat;
       color: #fff;
       text-align: center;
-      padding: 100px 0px 150px;
-      margin-top: 10px;
-    }
-    header h1 {
-      margin: 1;
-      font-size: 56px;
-      font-weight: 600;
-      letter-spacing: -1px;
-    }
-    header p {
-      font-size: 20px;
-      margin-top: 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 80vh;
+      padding: 100px 20px;
+      margin-top: 60px;
     }
 
+    header img {
+      max-width: 320px;
+      height: auto;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(32px, 6vw, 56px);
+      font-weight: 600;
+      letter-spacing: -1px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.25);
+    }
+
+    header p {
+      font-size: clamp(16px, 3vw, 20px);
+      margin-top: 16px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.25);
+    }
+
+    /* CONTENT SECTIONS */
     section {
       padding: 60px 20px;
       max-width: 1100px;
       margin: auto;
     }
+
     h2 {
       color: #132266;
       margin-bottom: 15px;
+      text-align: center;
     }
+
     .about, .services {
       background: #f9f9f9;
       border-radius: 12px;
@@ -86,12 +110,29 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
 
+    .about p, .services ul {
+      text-align: justify;
+    }
+
+    .services ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .services li::before {
+      content: '✔';
+      color: #f97316;
+      margin-right: 8px;
+    }
+
+    /* PROPERTIES */
     .properties {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 24px;
       margin-bottom: 80px;
     }
+
     .property {
       background: #fff;
       border-radius: 12px;
@@ -99,26 +140,33 @@
       overflow: hidden;
       transition: transform 0.2s ease-in-out;
     }
+
     .property:hover {
       transform: translateY(-4px);
     }
+
     .property img {
       width: 100%;
-      height: 240px;
+      height: 220px;
       object-fit: cover;
     }
+
     .property-content {
       padding: 20px;
+      text-align: center;
     }
+
     .property h3 {
       margin: 0 0 10px;
       color: #132266;
     }
+
     .property p {
       color: #555;
       font-size: 15px;
       margin-bottom: 15px;
     }
+
     .property a {
       display: inline-block;
       color: white;
@@ -129,23 +177,28 @@
       font-size: 14px;
       transition: background 0.2s ease;
     }
+
     .property a:hover {
       background: #1e3a8a;
     }
 
+    /* FORM */
     form {
       display: flex;
       flex-direction: column;
       gap: 14px;
       margin-top: 25px;
     }
+
     input, textarea {
       padding: 12px;
       border: 1px solid #ccc;
       border-radius: 6px;
       font-family: 'Inter', sans-serif;
       font-size: 14px;
+      width: 100%;
     }
+
     button {
       background: #132266;
       color: white;
@@ -156,10 +209,12 @@
       cursor: pointer;
       align-self: flex-start;
     }
+
     button:hover {
       background: #1e3a8a;
     }
 
+    /* FOOTER */
     footer {
       background: #f8f8f8;
       text-align: center;
@@ -168,9 +223,47 @@
       color: #555;
       border-top: 1px solid #e5e5e5;
     }
+
     footer a {
       color: #132266;
       text-decoration: none;
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      header {
+        padding: 80px 20px;
+        min-height: 70vh;
+      }
+
+      header img {
+        max-width: 220px;
+      }
+
+      header h1 {
+        font-size: 36px;
+      }
+
+      header p {
+        font-size: 16px;
+      }
+
+      .property img {
+        height: 180px;
+      }
     }
   </style>
 </head>
@@ -182,19 +275,19 @@
       <a href="#about">Quiénes Somos</a>
       <a href="#services">Qué Hacemos</a>
       <a href="#properties">Propiedades</a>
-      <a href="#contact"><b>Contacto</b></a>
+      <a href="#contact">Contacto</a>
     </div>
   </nav>
 
   <header id="inicio">
-    <!--<h1>HAVENHOME - Hosts</h1>*/-->
-	<img src="HH Hero white.svg" alt="Haven Home Logo">
+    <img src="HH Hero white.svg" alt="Haven Home Logo">
+    <!--<h1>Haven Home Hosts</h1>-->
     <p>Gestión profesional de alojamientos temporales en El Salvador</p>
   </header>
 
   <section id="about" class="about">
     <h2>Quiénes Somos</h2>
-    <p>HavenHome es una iniciativa para la gestión de propiedades especializada en alquileres a corto plazo a través de la plataforma Airbnb. Nuestro objetivo es brindar un servicio basado en la hospitalidad, honestidad y profesionalismo, generando experiencias únicas para los huéspedes y tranquilidad a los propietarios, mientras posicionamos a HAVENHOME como referente en la gestión de alojamientos temporales.</p>
+    <p>HAVENHOME es una iniciativa para la gestión de propiedades especializada en alquileres a corto plazo a través de la plataforma Airbnb. Nuestro objetivo es brindar un servicio basado en la hospitalidad, honestidad y profesionalismo, generando experiencias únicas para los huéspedes y tranquilidad a los propietarios, mientras posicionamos a HAVENHOME como referente en la gestión de alojamientos temporales.</p>
   </section>
 
   <section id="services" class="services">
@@ -218,7 +311,7 @@
     </div>
 
     <div class="property">
-      <img src="novus1.png" alt="Apto Novus">
+      <img src="novus1.png" alt="Apto Nobu">
       <div class="property-content">
         <h3>Apartamento en San Francisco</h3>
         <p>Próximamente disponible. Un espacio elegante y moderno en una de las zonas más exclusivas de San Salvador.</p>
@@ -227,7 +320,7 @@
     </div>
 
     <div class="property">
-      <img src="sanblas.png" alt="Rancho San blas">
+      <img src="sanblas.png" alt="Rancho San Blas">
       <div class="property-content">
         <h3>Rancho de playa en San Blas</h3>
         <p>Próximamente disponible. Disfruta del sol, la arena y el mar en un ambiente relajado y familiar.</p>
@@ -249,7 +342,7 @@
 
   <footer>
     <p>📩 havenhome.hosts@gmail.com | 📸 <a href="https://www.instagram.com/havenhome.hosts" target="_blank">@havenhome.hosts</a></p>
-    <p>© <span id="year"></span> HavenHome - Hosts. Todos los derechos reservados.</p>
+    <p>© <span id="year"></span> Haven Home Hosts. Todos los derechos reservados.</p>
   </footer>
 
   <script>
@@ -257,3 +350,4 @@
   </script>
 </body>
 </html>
+
